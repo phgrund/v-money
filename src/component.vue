@@ -3,6 +3,7 @@
          :value="formattedValue"
          @change="change"
          v-money="{precision, decimal, thousands, prefix, suffix}"
+         :disabled="disabled"
          class="v-money" />
 </template>
 
@@ -42,6 +43,10 @@ export default {
     suffix: {
       type: String,
       default: () => defaults.suffix
+    },
+    disabled: {
+      type: Boolean,
+      default: false
     }
   },
 
